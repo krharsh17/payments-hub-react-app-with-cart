@@ -12,7 +12,7 @@ function CartModal({ show, handleClose, handleShow }) {
     const getTAC = () => {
       setLoading(true)
         let totalCost = getTotalCost().toFixed(2)
-        return fetch('<YOUR-DEPLOYED-API-LINK>/getTAC', {
+        return fetch('https://react-browserpost-api.onrender.com/paymentResult/getTAC', {
      	   method: 'post',
      	   body: JSON.stringify({
      		   amount: totalCost
